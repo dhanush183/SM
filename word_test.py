@@ -7,7 +7,7 @@ class TestWordProcessor(unittest.TestCase):
         self.processor = WordProcessor()
 
     def test_count_alphabets(self):
-        self.assertEqual(self.processor.count_alphabets("Hello World 123"), 10)
+        self.assertEqual(self.processor.count_alphabets("Hello World 1234"), 10)
 
     def test_count_numbers(self):
         self.assertEqual(self.processor.count_numbers("Hello World 123"), 3)
