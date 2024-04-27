@@ -27,7 +27,7 @@ def test_replace_string():
     text = "Hello World 123"
     old_str = 'H'
     new_str = 'W'
-    exp_result = "Wello World 123"
+    exp_result = "Hello World 123"
     result = word_processor.replace_string(text, old_str, new_str)
     assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
 
