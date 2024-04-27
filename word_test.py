@@ -1,33 +1,23 @@
+import unittest
 from word_processor import WordProcessor
 
-word_processor = WordProcessor()
 
-"""
-def test_count_alphabets():
-    text = "Hello World 123" #This line is the input text for count_alphabets testing
-    exp_result = 10 # This line is for expected result
-    result = word_processor.count_alphabets(text)
-    assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
-    
-def test_count_numbers():
-    text = "Hello World 123"# This line is the input text for count numbers testing
-    exp_result = 3# this line is for expected output
-    result = word_processor.count_numbers(text)
-    assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
-"""
+class TestWordProcessor(unittest.TestCase):
+    def setUp(self):
+        self.processor = WordProcessor()
 
-def test_is_palindrome():
-    text = "Hello World 123"#input text for this test
-    exp_result = False#expected output for this test
-    result = word_processor.is_palindrome(text)
-    assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
+    def test_count_alphabets(self):
+        self.assertEqual(self.processor.count_alphabets("Hello World 123"), 10)
 
-"""
-def test_replace_string():
-    text = "Hello World 123"
-    old_str = 'H'
-    new_str = 'W'
-    exp_result = "Wello World 123"
-    result = word_processor.replace_string(text, old_str, new_str)
-    assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
-"""
+    def test_count_numbers(self):
+        self.assertEqual(self.processor.count_numbers("Hello World 123"), 3)
+
+    def test_is_palindrome(self):
+        self.assertTrue(self.processor.is_palindrome("mam"))
+
+    def test_replace_string(self):
+        self.assertEqual(self.processor.replace_string("Hello World 123", "H", "W"), "Wello World 123")
+
+
+if __name__ == '__main__':
+    unittest.main()
