@@ -17,7 +17,7 @@ def test_count_numbers():
 """
 
 def test_is_palindrome():
-    text = "Hello World 123" #input text for this test
+    text = "Hello World 123"#input text for this test
     exp_result = False#expected output for this test
     result = word_processor.is_palindrome(text)
     assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
