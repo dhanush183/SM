@@ -9,9 +9,9 @@ class WordProcessor:
    #     return sum(1 for char in text if char.isdigit())
 
    #method to check string is palindrome or not
-    #def is_palindrome(self, text):
-     #  return stripped_text == stripped_text[::-1]
+    def is_palindrome(self, text):
+       return text == text[::-1]
 
 #method to replace the text in a given string
-    def replace_string(self, text, old, new):
-       return text.replace(old, new)
+   # def replace_string(self, text, old, new):
+      # return text.replace(old, new)
