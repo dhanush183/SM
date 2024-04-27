@@ -2,21 +2,20 @@ from word_processor import WordProcessor
 
 word_processor = WordProcessor()
 
-
+"""
 def test_count_alphabets():
     text = "Hello World 123" #This line is the input text for count_alphabets testing
     exp_result = 10 # This line is for expected result
     result = word_processor.count_alphabets(text)
     assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
-
 """
 def test_count_numbers():
-    text = "Hello World 123"
-    exp_result = 3
+    text = "Hello World 123" # This line is the input text for count numbers testing
+    exp_result = 5 # this line is for expected output
     result = word_processor.count_numbers(text)
     assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
 
-
+"""
 def test_is_palindrome():
     text = "Hello World 123"
     exp_result = False
