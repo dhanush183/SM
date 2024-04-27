@@ -11,7 +11,7 @@ def test_count_alphabets():
 """
 def test_count_numbers():
     text = "Hello World 123"# This line is the input text for count numbers testing
-    exp_result = 6# this line is for expected output
+    exp_result = 3# this line is for expected output
     result = word_processor.count_numbers(text)
     assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
 
