@@ -1,23 +1,24 @@
 import unittest
 from word_processor import WordProcessor
 
-
-class TestWordProcessor(unittest.TestCase):
-    def setUp(self):
-        self.processor = WordProcessor()
-
-    def test_count_alphabets(self):
-        self.assertEqual(self.processor.count_alphabets("Hello World 1234"), 10)
-
-    def test_count_numbers(self):
-        self.assertEqual(self.processor.count_numbers("Hello World 123"), 3)
-
-    def test_is_palindrome(self):
-        self.assertTrue(self.processor.is_palindrome("mam"))
-
-    def test_replace_string(self):
-        self.assertEqual(self.processor.replace_string("Hello World 123", "H", "W"), "Wello World 123")
+#Integration testing for all test cases
+class Integration(unittest.TestCase):
+    def test(self):
+        text = '12madam21'
+        self.assertEqual(WordProcessor.count_numbers(self, text), 4) #test for numbers count
+        self.assertEqual(WordProcessor.count_alphabets(self, text), 5) #test for alphabets count
+        self.assertEqual(WordProcessor.is_palindrome(self, text), True) #test for checking palindrome or not
+        self.assertEqual(WordProcessor.replace_string(self, text, 'a', 's'), '12msdsm21') #test for replace the string
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
+
+
+
+
+
+
+
+
+
