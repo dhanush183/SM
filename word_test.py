@@ -5,7 +5,7 @@ word_processor = WordProcessor()
 
 def test_count_alphabets():
     text = "Hello World 123" #This line is the input text for count_alphabets testing
-    exp_result = 13 # This line is for expected result
+    exp_result = 10 # This line is for expected result
     result = word_processor.count_alphabets(text)
     assert result == exp_result, f"Expected: {exp_result}, but got: {result}"
 
