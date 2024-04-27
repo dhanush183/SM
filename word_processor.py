@@ -1,9 +1,9 @@
 
 class WordProcessor:
-
-    def count_alphabets(self, text):
+# method to generate count of alphabets in a string
+   def count_alphabets(self, text):
         return sum(1 for char in text if char.isalpha())
-
+"""
     def count_numbers(self, text):
         return sum(1 for char in text if char.isdigit())
 
@@ -13,3 +13,4 @@ class WordProcessor:
 
     def replace_string(self, text, old, new):
         return text.replace(old, new)
+"""
